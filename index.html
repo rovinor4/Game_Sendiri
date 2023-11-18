@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <link rel="shortcut icon" href="./AssetNotC/Icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./game.css">
+</head>
+
+<body>
+    <main>
+        <div class="dialog" id="welcome" style="display: block;">
+            <img src="./AssetNotC/Icon.png" alt="">
+            <h1>Instruction Virus Slayer</h1>
+            <ol>
+                <li>Input Username and click Play</li>
+                <li>Destroy Virus with D F J K Key</li>
+                <li>Reach High Score</li>
+                <li>Enjoy</li>
+            </ol>
+            <input type="text" placeholder="Masukan Username" id="username">
+            <button disabled style="margin-top: 20px;" id="mulai">
+                Start
+            </button>
+        </div>
+        <div class="dialog" id="timer" style="display: none;">
+            <h1 id="timerText">3</h1>
+        </div>
+
+        <div class="dashboard" id="dashboard" style="display: none;">
+            <div>
+                <h1 id="timer_game"></h1>
+                <h1 id="score"></h1>
+                <h1 id="fail"></h1>
+                <h1 id="nama_player"></h1>
+                <div class="boxGameQuit">
+                    <h2>Virus Slayer</h2>
+                    <button style="margin: 10px 0px;background-color: rgb(69, 69, 69);"
+                        id="restartBtnMenu">Restart</button>
+                    <button style="margin: 10px 0px;" id="QuitBtn">Quit</button>
+                </div>
+            </div>
+            <canvas id="canvas" width="550px" height="700px"></canvas>
+        </div>
+
+        <div class="dialog abs" id="GamePauseTimer" style="display: none;">
+            <div class="box">
+                <h1 style="font-size: 100px;text-align: center;" id="TimerDot">3</h1>
+            </div>
+        </div>
+        <div class="dialog abs" id="GamePause" style="display: none;">
+            <div class="box">
+                <p style="text-align: center;font-size: 20px;">Game Pause</p>
+                <div style="display: flex; justify-content: center;align-items: center;gap: 10px;">
+                    <button style="margin: 0;background-color: transparent;border: 1px solid white;"
+                        id="Continue">Continue</button>
+                    <button style="margin: 0;" id="restartBtn" class="restartBtn">Restart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="dialog abs" id="BoxGameOver" style="display: none;">
+            <div class="box">
+                <h1>Game Over</h1>
+                <p id="timer_close">Time : 14:32</p>
+                <p id="score_close">Score : 14</p>
+                <p id="name_close">Player : Robert</p>
+                <button id="BtnRestartGameOver">
+                    Restart
+                </button>
+            </div>
+        </div>
+    </main>
+    <script src="./Fungsi.js"></script>
+
+</body>
+
+</html>
